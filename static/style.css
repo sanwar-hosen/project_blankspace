@@ -32,7 +32,7 @@ html, body {
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  filter: blur(45px);
+  filter: blur(60px);
   opacity: 0.9;
 }
 
@@ -81,12 +81,12 @@ html, body {
 
 /* Violet — fast inner orbit, moderate eccentricity */
 .blob--4 {
-  width: 36vw;
-  height: 36vw;
+  width: 60vw;
+  height: 60vw;
   max-width: 500px;
   max-height: 500px;
-  top: calc(50% - 18vw);
-  left: calc(50% - 18vw);
+  top: calc(50% - 30vw);
+  left: calc(50% - 30vw);
   background: radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, rgba(139, 92, 246, 0.35) 50%, transparent 75%);
   animation: orbitViolet 14s linear infinite;
 }
