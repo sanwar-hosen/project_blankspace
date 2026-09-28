@@ -32,7 +32,7 @@ html, body {
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  filter: blur(70px);
+  filter: blur(100px);
   opacity: 0.9;
 }
 
