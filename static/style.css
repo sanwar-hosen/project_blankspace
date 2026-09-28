@@ -44,8 +44,8 @@ html, body {
 
 /* Blue — wide, gentle, nearly circular orbit */
 .blob--1 {
-  width: 50vw;
-  height: 50vw;
+  width: 60vw;
+  height: 60vw;
   max-width: 700px;
   max-height: 700px;
   top: calc(50% - 25vw);
@@ -56,8 +56,8 @@ html, body {
 
 /* Purple — tilted elliptical orbit */
 .blob--2 {
-  width: 48vw;
-  height: 48vw;
+  width: 55vw;
+  height: 55vw;
   max-width: 680px;
   max-height: 680px;
   top: calc(50% - 24vw);
@@ -69,8 +69,8 @@ html, body {
 /* Teal — THE SATELLITE: highly eccentric Kepler orbit */
 /* Slingshots fast through periapsis (near center), crawls at apoapsis (far) */
 .blob--3 {
-  width: 42vw;
-  height: 42vw;
+  width: 65vw;
+  height: 65vw;
   max-width: 580px;
   max-height: 580px;
   top: calc(50% - 21vw);
@@ -81,8 +81,8 @@ html, body {
 
 /* Violet — fast inner orbit, moderate eccentricity */
 .blob--4 {
-  width: 60vw;
-  height: 60vw;
+  width: 80vw;
+  height: 80vw;
   max-width: 500px;
   max-height: 500px;
   top: calc(50% - 30vw);
