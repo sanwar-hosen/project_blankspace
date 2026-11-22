@@ -14,7 +14,7 @@
   --wash-c: #a78bfa;
   --wash-opacity: .22;
   --spring: cubic-bezier(.32, .72, 0, 1);
-  --u: 1.4px; /* mark unit: 56 units = 78px */
+  --u: .64px; /* mark unit: 56 units = 36px */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,22 +75,30 @@ body {
 @keyframes driftB { to { transform: translate(-22vw, -14vh) scale(.9); } }
 @keyframes driftC { to { transform: translate(-30vw, 10vh) scale(1.2); } }
 
+.brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: clamp(24px, 5vw, 56px);
+  outline: none;
+  width: fit-content;
+}
+
 .page {
   position: relative;
   z-index: 1;
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 48px 24px 24px;
-  max-width: 640px;
-  margin: 0 auto;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 clamp(24px, 5vw, 56px) clamp(40px, 9vh, 96px);
 }
 
 /* The mark */
-.mark { position: relative; width: calc(56 * var(--u)); height: calc(56 * var(--u)); margin-bottom: 20px; cursor: default; outline: none; }
+.mark { position: relative; width: calc(56 * var(--u)); height: calc(56 * var(--u)); flex: none; cursor: default; }
 .tile { position: absolute; inset: 0; border-radius: calc(16 * var(--u)); transition: transform 700ms var(--spring); }
 .back { background: var(--accent); opacity: .3; }
 .front { background: var(--primary); color: var(--primary-fg); display: grid; place-items: center; }
@@ -103,27 +111,25 @@ body {
 }
 @keyframes blink { 50% { opacity: 0; } }
 
-.mark:hover .back, .mark:focus-visible .back { transform: translate(calc(6 * var(--u)), calc(-2 * var(--u))) rotate(14deg); }
-.mark:hover .front, .mark:focus-visible .front { transform: rotate(-8deg) scale(1.05); }
+.brand:hover .back, .brand:focus-visible .back { transform: translate(calc(6 * var(--u)), calc(-2 * var(--u))) rotate(14deg); }
+.brand:hover .front, .brand:focus-visible .front { transform: rotate(-8deg) scale(1.05); }
 
 .name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: -.02em;
   color: var(--strong);
-  margin-bottom: 40px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: clamp(40px, 7.5vw, 88px);
   font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -.025em;
+  line-height: 1.04;
+  letter-spacing: -.03em;
   color: var(--strong);
-  text-wrap: balance;
 }
 
-.soon { margin-top: 16px; font-size: 16px; color: var(--muted); }
+.soon { margin-top: 24px; font-size: 16px; color: var(--muted); }
 
 /* Gentle entrance */
 .page > * { animation: rise .75s cubic-bezier(.16, 1, .3, 1) both; }
@@ -133,7 +139,6 @@ h1 {
 @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
 
 @media (max-width: 600px) {
-  h1 { font-size: 34px; }
   .blob { filter: blur(60px); }
 }
 
